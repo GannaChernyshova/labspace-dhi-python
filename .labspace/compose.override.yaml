@@ -3,10 +3,10 @@ services:
     environment:
       PROJECT_CLONE_URL: https://github.com/GannaChernyshova/labspace-dhi-python
 
-  # workspace:
-  #   # Override the default image if desired
-  #   # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-image
-  #   image: dockersamples/labspace-workspace-java
+  workspace:
+    # Override the default image if desired
+    # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-image
+    image: dockersamples/labspace-workspace-python
 
   #   # Override the default ports to publish additional ports you may need
   #   # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-ports

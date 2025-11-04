@@ -1,11 +1,15 @@
-title: Labspace starter
+title: Docker DHI Python Labspace 
 description: |
-  A basic template for creating a Labspace, including all of the boilerplate needed to write and publish a Labspace.
+  A repository containing a Hello World application consisting of a basic ExpressJS server and Dockerfile pointing to an Debian Base image to demonstrate the use of Docker Hardened Images (DHI)
 
 sections:
-  - title: Introduction
+  - title: Introducing Docker Scout and Docker Hardened Images (DHI)
     contentPath: .labspace/01-introduction.md
-  - title: Main Content 1
-    contentPath: .labspace/02-main-content.md
-  - title: Conclusion
-    contentPath: .labspace/03-conclusion.md
+  - title: Mirror the image
+    contentPath: .labspace/02-mirror-the-image.md
+  - title: Scan the Node.js Application with Docker Scout
+    contentPath: .labspace/03-image-scanning.md
+  - title: Making the Switch to Docker Hardened Images
+    contentPath: .labspace/04-switch-to-dhi.md
+  - title: DHI Attestations and Scanner Integration
+    contentPath: .labspace/05-compliance.md
