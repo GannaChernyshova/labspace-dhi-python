@@ -80,7 +80,7 @@ You would see the similar output:
   ✓      │ Supply chain attestations                           │    0 deviations              
   ✓      │ Valid Docker Hardened Image (DHI) or DHI base image │    0 deviations              
 ```
-Hooray! There are zero CVEs and Policy violations now!
+Hooray! All policieas ar in compliance!
 
 **Validate that the app works as expected**
 

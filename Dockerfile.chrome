@@ -1,0 +1,12 @@
+FROM demonstrationorg/dhi-debian-base:trixie-debian13
+
+# Install only Chromium - it will pull in required dependencies
+# ca-certificates is needed for HTTPS connections
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    chromium \
+    && rm -rf /var/lib/apt/lists/* \
+    && chromium --version
+
+CMD ["chromium", "--headless", "--no-sandbox", "--disable-gpu", "--version"]
+

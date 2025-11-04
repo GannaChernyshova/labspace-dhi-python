@@ -14,6 +14,5 @@ COPY app.py .
 
 # Expose port
 EXPOSE 8888
-
 # Run the application
 CMD ["python", "app.py"] 
