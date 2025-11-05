@@ -19,20 +19,20 @@ This lab already has a :fileLink[Dockerfile]{path="Dockerfile"}, so you can easi
 We'll use the buildx command (a Docker CLI plugin that extends the docker build) with the –provenance=true  and –sbom=true flags. These options attach [build attestations](https://docs.docker.com/build/metadata/attestations/) to the image, which Docker Scout uses to provide more detailed and accurate security analysis.
 
 ```bash
-docker buildx build --provenance=true --sbom=true -t $$orgname$$/demo-python-doi:v1 .
+docker buildx build --provenance=true --sbom=true -t $$orgname$$/demo-python-dhi:doi-v1 .
 ```
 
 2. Now that you have an image let's analyze it.
 Use the `docker scout cves` command to list all discovered vulnerabilities:
 
 ```bash
-docker scout cves $$orgname$$/demo-python-doi:v1
+docker scout cves $$orgname$$/demo-python-dhi:doi-v1
 ```
 
 If your account is part of an paid organization you can analyze the image with the `docker scout quickview` command to see the policy complince:
 
 ```bash
-docker scout quickview $$orgname$$/demo-python-doi:v1
+docker scout quickview $$orgname$$/demo-python-dhi:doi-v1
 ```
 You would see the similar output:
 ```plaintext no-copy-button

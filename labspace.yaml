@@ -13,3 +13,5 @@ sections:
     contentPath: .labspace/04-switch-to-dhi.md
   - title: DHI Attestations and Scanner Integration
     contentPath: .labspace/05-compliance.md
+  - title: Customizations
+    contentPath: .labspace/06-customizations.md

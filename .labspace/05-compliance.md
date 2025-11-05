@@ -75,10 +75,3 @@ docker scout vex get demonstrationorg/demo-python-dhi:v1 --output vex.json
 ```
 
 This generates a `vex.json` file containing all VEX statements for the specified image. Tools that support VEX can then use this file to suppress known non-exploitable CVEs.
-
-To use the VEX information with Grype or Trivy, pass the –vex flag during scanning:
-```bash
-trivy image demonstrationorg/demo-python-dhi:v1 --vex vex.json
-```
-
-This ensures your security scanning results are consistent across tools, leveraging the same set of vulnerability contexts provided by Docker Scout.

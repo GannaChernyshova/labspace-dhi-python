@@ -58,10 +58,10 @@ CMD ["python", "app.py"]
 
 3. Now Let's rebuild and scan the new image:
 ```bash
-docker buildx build --provenance=true --sbom=true -t $$orgname$$/demo-python-dhi:v1 .
+docker buildx build --provenance=true --sbom=true -t $$orgname$$/demo-python-dhi:dhi-v1 .
 ```
 ```bash
-docker scout policy $$orgname$$/demo-python-dhi:v1 --org $$orgname$$
+docker scout policy $$orgname$$/demo-python-dhi:dhi-v1 --org $$orgname$$
 ```
 You would see the similar output:
 ```plaintext no-copy-button
@@ -88,11 +88,14 @@ Last but not least, after migrating to a DHI base image, we should verify that t
 
 1. To do so, we can either start the app locally with:
 ```bash
-docker run --rm -d --name demo-python -p 8888:8888 demonstrationorg/demo-python-dhi:v1
+docker run --rm -d --name demo-python -p 8888:8888 demonstrationorg/demo-python-dhi:dhi-v1
 ```
 and navigate to :tabLink[This link]{href="http://localhost:8888" title="Web app"} to validate that the app is up and running.
 
 Then stop the container:
 ```bash
 docker stop demo-python
+```
+```bash
+pytest test_e2e.py
 ```
