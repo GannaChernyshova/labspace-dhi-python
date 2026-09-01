@@ -26,6 +26,7 @@ def test_app_displays_hello_world():
     # Set Chrome binary location if found
     chrome_binary_paths = [
         '/usr/bin/google-chrome',
+        '/usr/bin/chromium',
         '/opt/chrome/chrome',
         '/opt/chrome/google-chrome'
     ]

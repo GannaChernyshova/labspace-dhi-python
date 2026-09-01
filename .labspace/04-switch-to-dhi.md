@@ -1,20 +1,20 @@
 # Making the Switch to Docker Hardened Images
 
-Switching to a Docker Hardened Image is straightforward. All we need to do is replace the base image `python:3.11` with a DHI equivalent.
+Switching to a Docker Hardened Image is straightforward. All we need to do is replace the base image `python:3.14` with a DHI equivalent.
 
 Docker Hardened Images come in two variants:
 
-* Dev variant (`demonstrationorg/dhi-python:3.11-debian13-dev`) – includes a shell and package managers, making it suitable for building and testing.
-* Runtime variant (`demonstrationorg/dhi-python:3.11-debian13`) – stripped down to only the essentials, providing a minimal and secure footprint for production.
+* Dev variant (`demonstrationorg/dhi-python:3.14-debian13-dev`) – includes a shell and package managers, making it suitable for building and testing.
+* Runtime variant (`demonstrationorg/dhi-python:3.14-debian13`) – stripped down to only the essentials, providing a minimal and secure footprint for production.
 
 This makes them perfect for use in multi-stage Dockerfiles. We can build the app in the dev image, then copy the built application into the runtime image, which will serve as the base for production.
 
-1. Update the `Dockerfile` to use the `demonstrationorg/dhi-python:3.11-debian13-dev` as a `dev` stage image and `demonstrationorg/dhi-python:3.11-debian13` as a `runtime` image
+1. Update the `Dockerfile` to use the `demonstrationorg/dhi-python:3.14-debian13-dev` as a `dev` stage image and `demonstrationorg/dhi-python:3.14-debian13` as a `runtime` image
 
 For a multi-stage build approach:
 ```dockerfile
 # Stage 1: Build stage
-FROM demonstrationorg/dhi-python:3.11-debian13-dev AS dev
+FROM demonstrationorg/dhi-python:3.14-debian13-dev AS dev
 
 ENV PYTHONDONTWRITEBYTECODE=1 
 ENV PYTHONUNBUFFERED=1 
@@ -33,7 +33,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 
 # Stage 2: Runtime stage
-FROM demonstrationorg/dhi-python:3.11-debian13 AS runtime
+FROM demonstrationorg/dhi-python:3.14-debian13 AS runtime
 
 ENV PYTHONDONTWRITEBYTECODE=1 
 ENV PYTHONUNBUFFERED=1 

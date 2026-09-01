@@ -74,7 +74,7 @@ docker buildx build -f Dockerfile.chromium-oci -t demonstrationorg/chromium-oci:
 3. Select **Hardened Images** > **Management**
 4. Find the mirrored `dhi-python` repository
 5. Select **Customize** from the menu
-6. Select image version: `3.11-debian13-dev`
+6. Select image version: `3.14-debian13-dev`
 7. In the **OCI artifacts** section:
    - **Repository**: Select `chromium-oci`
    - **Tag**: Select `latest`
@@ -94,11 +94,11 @@ docker buildx build -f Dockerfile.chromium-oci -t demonstrationorg/chromium-oci:
    > - The chromium-oci OCI artifact must be built for the same platform(s) as your target DHI customization. Use `--platform linux/amd64,linux/arm64` when building to support multiple platforms.
 8. Select **Next: Configure**
 9. Configure:
-   - **Tag suffix**: `chromium` (creates tag `3.11-debian13-dev_chromium`)
+   - **Tag suffix**: `chromium` (creates tag `3.14-debian13-dev_chromium`)
    - **Platforms**: Select target platforms
 10. Select **Create Customization**
 
-**Result:** Customized image available as `$$orgname$$/dhi-python:3.11-debian13-dev_chromium`
+**Result:** Customized image available as `$$orgname$$/dhi-python:3.14-debian13-dev_chromium`
 
 ## Step 3: Update Dockerfile
 
@@ -108,7 +108,7 @@ Using the base DHI image without Chromium causes e2e tests to fail:
 
 ```dockerfile
 # Stage 1: Build stage
-FROM demonstrationorg/dhi-python:3.11-debian13-dev AS dev
+FROM demonstrationorg/dhi-python:3.14-debian13-dev AS dev
 
 ENV PYTHONDONTWRITEBYTECODE=1 
 ENV PYTHONUNBUFFERED=1 
@@ -159,7 +159,7 @@ Error initializing Chrome driver: Message: 'chromedriver' executable needs to be
 
 ```dockerfile
 # Stage 1: Build stage
-FROM demonstrationorg/dhi-python-anna:3.11-debian13-dev_chromium AS dev
+FROM demonstrationorg/dhi-python-anna:3.14-debian13-dev_chromium AS dev
 ```
 
 **Build command:**

@@ -1,6 +1,6 @@
 # Introduction
 
-👋 Welcome to the **Docker Hardened Images** lab! This lab outlines the benefits of Docker Hardened Images and walks you throught the migration process for the Node application.
+👋 Welcome to the **Docker Hardened Images** lab! This lab outlines the benefits of Docker Hardened Images and walks you through the migration process for the Python application.
 
 ## Docker Hardened Images are Secure, Minimal, Production-Ready Images with near-zero CVEs and enterprise-grade SLA for rapid remediation. 
 
@@ -13,5 +13,4 @@ These images follow a distroless philosophy, removing unnecessary components to 
 
 
 [DHI Catalog](https://hub.docker.com/orgs/demonstrationorg/hardened-images/catalog) lists the enterprise-ready, secure container images with built-in compliance and minimal vulnerabilities.
-
 

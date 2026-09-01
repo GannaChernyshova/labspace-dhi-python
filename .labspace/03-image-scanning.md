@@ -2,7 +2,7 @@
 
 ## Exploring the app
 
-This demo repository contains a Hello World Python application consisting of a basic Flask server and Dockerfile pointing to a Python 3.11 base image.
+This demo repository contains a Hello World Python application consisting of a basic Flask server and Dockerfile pointing to a Python 3.14 base image.
 The app logic is implemented in the :fileLink[app.py]{path="app.py"} file. 
 
 
@@ -10,7 +10,7 @@ The app logic is implemented in the :fileLink[app.py]{path="app.py"} file.
 
 To follow modern best practices, we want to containerize the app and eventually deploy it to production. Before doing so, we must ensure the image is secure by using [Docker Scout](https://www.docker.com/products/docker-scout/)
 
-Our Dockerfile uses a single-stage build approach and is based on the `python:3.11` image.
+Our Dockerfile uses a single-stage build approach and is based on the `python:3.14` image.
 
 **Let’s build our image with SBOM and provenance metadata**
 This lab already has a :fileLink[Dockerfile]{path="Dockerfile"}, so you can easily build the image.
@@ -38,8 +38,8 @@ You would see the similar output:
 ```plaintext no-copy-button
 Target               │  demonstrationorg/demo-python-dhi:v1  │    0C     1H     5M   142L     2?   
     digest           │  a7cc248d657a                         │                                     
-  Base image         │  python:3.11                          │    0C     1H     5M   142L     2?   
-  Updated base image │  python:3.11-slim                     │    0C     0H     2M    20L          
+  Base image         │  python:3.14                          │    0C     1H     5M   142L     2?
+  Updated base image │  python:3.14-slim                     │    0C     0H     2M    20L
                      │                                       │           -1     -3   -122     -2   
 
 Policy status  FAILED  (5/10 policies met)
@@ -67,4 +67,3 @@ There are still few on the base image level. And the critical policies have fail
     5. Unapproved base images found
     6. Invalid or Missing Docker Hardened Image (DHI) or DHI base image
  This is where DHI comes into play.
-

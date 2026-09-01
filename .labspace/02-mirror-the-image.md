@@ -4,14 +4,14 @@
 
 ::variableDefinition[orgname]{prompt="What is your Docker org name?"}
 
-## 1. Morror a DHI node image repo
+## 1. Mirror a DHI Python image repository
 
 Go to the [Python DHI page](https://hub.docker.com/orgs/$$orgname$$/hardened-images/catalog/dhi/python) and click on the `Mirror to repository` button.
 
 In the opened pop-up set the name of the destination repository to `dhi-python`  
-![Morror Python DHI](.labspace/images/mirror-python.png)  
+![Mirror Python DHI](.labspace/images/mirror-python.png)
 
-Click on Mirror. In a few minutes you'll see all available Node DHI tags in your `dhi-python` repository in the Docker Hub. Mirrored repositories work like any other repository in your Docker Hub organization
+Click on Mirror. In a few minutes you'll see all available Python DHI tags in your `dhi-python` repository in Docker Hub. Mirrored repositories work like any other repository in your Docker Hub organization.
 
 ## 2. Login with docker 
 In order to use Docker Scout to analyze the image during this lab, you will need to be logged in. Make sure that you are logged in with Docker:

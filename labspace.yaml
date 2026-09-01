@@ -1,13 +1,13 @@
-title: Docker DHI Python Labspace 
+title: Docker DHI Python Labspace
 description: |
-  A repository containing a Hello World application consisting of a basic ExpressJS server and Dockerfile pointing to an Debian Base image to demonstrate the use of Docker Hardened Images (DHI)
+  A repository containing a Hello World Flask application and Dockerfile that demonstrate the use of Docker Hardened Images (DHI)
 
 sections:
   - title: Introducing Docker Scout and Docker Hardened Images (DHI)
     contentPath: .labspace/01-introduction.md
   - title: Mirror the image
     contentPath: .labspace/02-mirror-the-image.md
-  - title: Scan the Node.js Application with Docker Scout
+  - title: Scan the Python Application with Docker Scout
     contentPath: .labspace/03-image-scanning.md
   - title: Making the Switch to Docker Hardened Images
     contentPath: .labspace/04-switch-to-dhi.md
